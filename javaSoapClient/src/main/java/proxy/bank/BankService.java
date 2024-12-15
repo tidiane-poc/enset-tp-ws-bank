@@ -33,8 +33,8 @@ public interface BankService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "convertEuroToDirham", targetNamespace = "http://ws/", className = "proxy.ConvertEuroToDirham")
-    @ResponseWrapper(localName = "convertEuroToDirhamResponse", targetNamespace = "http://ws/", className = "proxy.ConvertEuroToDirhamResponse")
+    @RequestWrapper(localName = "convertEuroToDirham", targetNamespace = "http://ws/", className = "proxy.bank.ConvertEuroToDirham")
+    @ResponseWrapper(localName = "convertEuroToDirhamResponse", targetNamespace = "http://ws/", className = "proxy.bank.ConvertEuroToDirhamResponse")
     @Action(input = "http://ws/BankService/convertEuroToDirhamRequest", output = "http://ws/BankService/convertEuroToDirhamResponse")
     public double convertEuroToDirham(
         @WebParam(name = "amount", targetNamespace = "")
@@ -48,8 +48,8 @@ public interface BankService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "convertDirhamToEuro", targetNamespace = "http://ws/", className = "proxy.ConvertDirhamToEuro")
-    @ResponseWrapper(localName = "convertDirhamToEuroResponse", targetNamespace = "http://ws/", className = "proxy.ConvertDirhamToEuroResponse")
+    @RequestWrapper(localName = "convertDirhamToEuro", targetNamespace = "http://ws/", className = "proxy.bank.ConvertDirhamToEuro")
+    @ResponseWrapper(localName = "convertDirhamToEuroResponse", targetNamespace = "http://ws/", className = "proxy.bank.ConvertDirhamToEuroResponse")
     @Action(input = "http://ws/BankService/convertDirhamToEuroRequest", output = "http://ws/BankService/convertDirhamToEuroResponse")
     public double convertDirhamToEuro(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -58,12 +58,12 @@ public interface BankService {
     /**
      * 
      * @return
-     *     returns java.util.List<proxy.Account>
+     *     returns java.util.List<proxy.bank.Account>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAccounts", targetNamespace = "http://ws/", className = "proxy.GetAccounts")
-    @ResponseWrapper(localName = "getAccountsResponse", targetNamespace = "http://ws/", className = "proxy.GetAccountsResponse")
+    @RequestWrapper(localName = "getAccounts", targetNamespace = "http://ws/", className = "proxy.bank.GetAccounts")
+    @ResponseWrapper(localName = "getAccountsResponse", targetNamespace = "http://ws/", className = "proxy.bank.GetAccountsResponse")
     @Action(input = "http://ws/BankService/getAccountsRequest", output = "http://ws/BankService/getAccountsResponse")
     public List<Account> getAccounts();
 
@@ -71,12 +71,12 @@ public interface BankService {
      * 
      * @param arg0
      * @return
-     *     returns proxy.Account
+     *     returns proxy.bank.Account
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAccount", targetNamespace = "http://ws/", className = "proxy.GetAccount")
-    @ResponseWrapper(localName = "getAccountResponse", targetNamespace = "http://ws/", className = "proxy.GetAccountResponse")
+    @RequestWrapper(localName = "getAccount", targetNamespace = "http://ws/", className = "proxy.bank.GetAccount")
+    @ResponseWrapper(localName = "getAccountResponse", targetNamespace = "http://ws/", className = "proxy.bank.GetAccountResponse")
     @Action(input = "http://ws/BankService/getAccountRequest", output = "http://ws/BankService/getAccountResponse")
     public Account getAccount(
         @WebParam(name = "arg0", targetNamespace = "")

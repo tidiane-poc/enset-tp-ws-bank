@@ -69,7 +69,7 @@ public class BankWs
      */
     @WebEndpoint(name = "BankServicePort")
     public BankService getBankServicePort() {
-        return getPort(new QName("http://ws/", "BankServicePort"), BankService.class);
+        return super.getPort(new QName("http://ws/", "BankServicePort"), BankService.class);
     }
 
     /**

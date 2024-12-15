@@ -10,7 +10,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the proxy package. 
+ * generated in the proxy.bank package. 
  * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -34,7 +34,7 @@ public class ObjectFactory {
     private static final QName _GetAccountsResponse_QNAME = new QName("http://ws/", "getAccountsResponse");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: proxy
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: proxy.bank
      * 
      */
     public ObjectFactory() {
